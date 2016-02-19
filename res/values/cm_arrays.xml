@@ -154,6 +154,12 @@
         <item>@string/profile_action_disable</item>
     </string-array>
 
+    <string-array name="profile_notification_light_entries" translatable="false">
+        <item>@string/profile_action_none</item>
+        <item>@string/profile_action_enable</item>
+        <item>@string/profile_action_disable</item>
+    </string-array>
+
     <!-- Profile mode options. -->
      <string-array name="profile_entries" translatable="false">
          <item>@string/profile_entries_on</item>
@@ -402,10 +408,10 @@
         <item>power</item>
         <item>reboot</item>
         <item>screenshot</item>
-        <item>profile</item>
         <item>airplane</item>
         <item>users</item>
         <item>bugreport</item>
+        <item>silent</item>
     </string-array>
 
     <!-- Gamma calibration descriptors, deliberately empty as string values populated via

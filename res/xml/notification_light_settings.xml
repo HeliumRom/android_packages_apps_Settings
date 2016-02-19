@@ -25,6 +25,12 @@
             android:key="notification_light_pulse"
             android:title="@string/notification_light_title" />
 
+        <com.android.settings.cyanogenmod.CMSystemSettingSwitchPreference
+            android:key="notification_light_color_auto"
+            android:title="@string/notification_light_automagic"
+            android:dependency="notification_light_pulse"
+            android:defaultValue="true" />
+
         <com.android.settings.notificationlight.ApplicationLightPreference
             android:key="default"
             android:title="@string/notification_light_default_value"
@@ -54,6 +60,12 @@
             android:key="notification_light_screen_on_enable"
             android:title="@string/notification_light_screen_on"
             android:dependency="notification_light_pulse" />
+
+        <com.android.settings.cyanogenmod.CMSystemSettingSwitchPreference
+            android:key="allow_lights"
+            android:title="@string/notification_light_zen_mode"
+            android:dependency="notification_light_pulse"
+            android:defaultValue="true" />
 
         <com.android.settings.cyanogenmod.CMSystemSettingSwitchPreference
             android:key="notification_light_pulse_custom_enable"
