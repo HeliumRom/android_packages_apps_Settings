@@ -314,7 +314,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.putExtra("is_sm", true);
                 intent.setClassName("android",
-                        com.android.internal.app.SMPlatLogoActivity.class.getName());
+                        com.android.internal.app.PlatLogoActivity.class.getName());
                 try {
                     startActivity(intent);
                 } catch (Exception e) {
