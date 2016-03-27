@@ -2748,7 +2748,7 @@
     <string name="app_permissions" msgid="4148222031991883874">"应用访问授权"</string>
     <string name="app_permissions_summary" msgid="2098173899436407221">"已授予 <xliff:g id="COUNT_0">%d</xliff:g> 个应用（共 <xliff:g id="COUNT_1">%d</xliff:g> 个）其他权限"</string>
     <string name="app_permissions_group_summary" msgid="2721303391744909000">"已授权 <xliff:g id="COUNT_0">%d</xliff:g> 个应用（共 <xliff:g id="COUNT_1">%d</xliff:g> 个）"</string>
-    <string name="tap_to_wake" msgid="7211944147196888807">"点按唤醒"</string>
+    <string name="tap_to_wake" msgid="7211944147196888807">"双击唤醒"</string>
     <string name="tap_to_wake_summary" msgid="4341387904987585616">"在屏幕上的任意位置点按两次即可唤醒设备"</string>
     <string name="domain_urls_title" msgid="8762012672312435252">"应用链接"</string>
     <string name="domain_urls_summary_none" msgid="2639588015479657864">"不打开支持的链接"</string>
