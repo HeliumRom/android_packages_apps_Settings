@@ -15,6 +15,7 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="@string/button_pref_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <SwitchPreference
@@ -28,6 +29,17 @@
         android:title="@string/button_backlight_title"
         android:dialogTitle="@string/button_backlight_title"
         android:persistent="false" />
+
+    <PreferenceCategory
+        android:key="recents_options"
+        android:title="@string/recents_options" >
+
+    <PreferenceScreen
+        android:key="recents_panel"
+        android:title="@string/recents_options_title"
+        android:fragment="com.android.settings.sudamod.RecentsSettings" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="navigation_bar_category"

@@ -164,6 +164,7 @@
   <string name="toggleData">سانلىق مەلۇمات ئۇلىنىشى</string>
   <string name="toggleSync">سانلىق مەلۇماتىنى ئۆزلۈكىدىن قەدەمداشلا</string>
   <string name="toggle2g3g4g">ئالدىن بەلگىلەنگەن تور تىپى</string>
+  <string name="toggle2g3g4g_msim">ئالدىن بەلگىلەنگەن تور تىپى (%1$s)</string>
   <string name="toggleNfc">NFC</string>
   <!-- Wi-Fi region code -->
   <string name="wifi_setting_countrycode_title">Wi\u2011Fi رايون كودى</string>
@@ -171,6 +172,18 @@
   <string name="wifi_setting_countrycode_summary">Wi\u2011Fi ئۈچۈن رايون كودى بېكىتىڭ</string>
   <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
   <string name="wifi_setting_countrycode_error">رايون كودىنى تەڭشىگەندە مەسىلە كۆرۈلدى.</string>
+  <string name="wifi_countrycode_us">ئامېرىكا قوشما شتاتلىرى</string>
+  <string name="wifi_countrycode_ca">كانادا، تەيۋەن</string>
+  <string name="wifi_countrycode_de">گېرمانىيە</string>
+  <string name="wifi_countrycode_gb">ياۋروپا</string>
+  <string name="wifi_countrycode_jp">ياپونىيە، رۇسىيە</string>
+  <string name="wifi_countrycode_au">ئاۋسترالىيە</string>
+  <string name="wifi_countrycode_cn">جۇڭگو</string>
+  <string name="wifi_countrycode_kr">كورېيە</string>
+  <string name="wifi_countrycode_tr">جەنۇبى ئافرىقا، تۈركىيە</string>
+  <string name="wifi_countrycode_sg">ئىسرائىلىيە، سىنگاپور</string>
+  <string name="wifi_countrycode_br">بىرازىلىيە</string>
+  <string name="wifi_countrycode_in">ھىندىستان</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">ئۆچۈر</string>
   <string name="profile_action_none">ئۆزگەرتمەي قالدۇر</string>
@@ -514,6 +527,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">ئېكراندىكى يولباشچى بالداقنى قوزغىتىدۇ</string>
   <string name="disable_navkeys_summary">ئېكراندىكى يولباشچى بالداقنى قوزغىتىپ قاتتىق دېتال توپچىنى چەكلەيدۇ</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">قوش چېكىلسە ئويغىتىدۇ</string>
+  <string name="double_tap_to_wake_summary">ئېكران قوش چېكىلسە ئېكراننى قوزغىتىدۇ</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">قوش چېكىلسە ئۇخلىتىدۇ</string>
   <string name="double_tap_to_sleep_summary">ئېكراننى تاقاش ئۈچۈن ھالەت بالداقنى قوش چېكىڭ</string>
@@ -537,14 +553,6 @@
   <string name="color_red_title">قىزىل</string>
   <string name="color_green_title">يېشىل</string>
   <string name="color_blue_title">كۆك</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">گامما توغرىلاش</string>
-  <string name="gamma_tuning_summary_head">گامما قىممىتىنى تەڭشەش</string>
-  <string name="gamma_tuning_control_set_header">گۇرۇپپا <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">ئاق-قارىلىقى</string>
-  <string name="gamma_tuning_brightness">يورۇقلۇق</string>
-  <string name="gamma_tuning_saturation">تويۇنۇش</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">نەغمە ئەپنى قوزغات</string>
   <string name="headset_connect_player_summary">تىڭشىغۇچ قىستۇرۇلغاندا كۆڭۈلدىكى نەغمە چالىدىغان ئەپنى قوزغىتىدۇ</string>
@@ -575,6 +583,9 @@
   <string name="saturation_str">تويۇنۇشچانلىقى: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">ئاق-قارىلىقى: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">يورۇقلۇقى: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">ئۆلچەملىك</string>
+  <string name="screen_color_vivid">جانلىق</string>
+  <string name="screen_color_custom">ئىختىيارىي</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">ۋاقىت ۋە مۇھىت شەرتى ئاساسىدا ئېكرانىڭىزنى ئەلالاشتۇرۇپ ئوقۇشچانلىقنى ياخشىلاپ كۆز چارچاشنى تۆۋەنلىتىدۇ</string>
   <string name="live_display_mode">كۆرسىتىش ھالىتى</string>
@@ -992,4 +1003,28 @@
   <string name="battery_info_status_charging_dock_ac">تەگلىك ئۆزگىرىشچان توك ئارقىلىق توكلاۋاتىدۇ</string>
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
   <string name="battery_info_status_charging_dock_usb">تەگلىك USB ئارقىلىق توكلاۋاتىدۇ</string>
+  <string name="restrict_app_wlan_title">ئەپنىڭ Wi\u2011Fi نى ئىشلىتىشىنى چەكلەش</string>
+  <string name="restrict_app_wlan_summary">ئەپنىڭ Wi\u2011Fi نى ئىشلىتىپ تورغا ئۇلىنىشىدىن ساقلىنىش</string>
+  <string name="restrict_app_cellular_title">ئەپنىڭ كۆچمە تورنى ئىشلىتىشىنى چەكلەش</string>
+  <string name="restrict_app_cellular_summary">ئەپنىڭ كۆچمە تورنى ئىشلىتىپ تورغا ئۇلىنىشىدىن ساقلىنىش</string>
+  <string name="privacy_guard_internet_category">ئىنتېرنېت</string>
+  <!-- Weather -->
+  <string name="weather_settings_title">ھاۋارايى</string>
+  <string name="weather_settings_general_settings_title">ئادەتتىكى</string>
+  <string name="reset_stats_confirm">جەزملەش</string>
+  <string name="restrict_cellular_access_dialog_summary">كۆچمە تورغىلا باغلىنىدىغان ئەھۋالدا، بۇ ئىقتىدار تەگلىك سانلىق مەلۇماتىغا ئېھتىياجلىق پىروگراممىنىڭ خىزمەت قىلىشىنى توختىتىپ قويۇشى مۇمكىن.\n\nسىز شۇ ئەپنىڭ تەمىنلىگەن تەڭشىكىدىن سانلىق مەلۇمات ئېقىمىنى تىزگىنلەيدىغان تېخىمۇ مۇۋاپىق تاللانمىنى تاپالىشىڭىز مۇمكىن.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">ھاۋارايىنى كۆرسەت</string>
+  <!-- Per app controls for LP keyguard notifications -->
+  <string name="app_notification_show_on_keyguard_title">قۇلۇپ ئېكراندا كۆرسىتىدۇ</string>
+  <string name="app_notification_show_on_keyguard_summary">قۇلۇپ ئېكراندا بۇ ئەپنىڭ ئۇقتۇرۇشلىرىنى كۆرسىتىدۇ</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">قۇلۇپ ئېكراندا دائىملىق ئۇقتۇرۇشنى چەكلەيدۇ</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">قۇلۇپ ئېكراندا بۇ ئەپنىڭ دائىملىق ئۇقتۇرۇشىنى مەڭگۈ كۆرسەتمەيدۇ</string>
+  <!-- CmRadioInfo -->
+  <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
+  <!-- Format string for fingerprint location message -->
+  <!-- Fingerprint sensor locations -->
 </resources>

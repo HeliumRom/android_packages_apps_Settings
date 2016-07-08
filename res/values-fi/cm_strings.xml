@@ -165,6 +165,7 @@
   <string name="toggleData">Datayhteys</string>
   <string name="toggleSync">Tietojen automaattinen synkronointi</string>
   <string name="toggle2g3g4g">Ensisijainen verkkotila</string>
+  <string name="toggle2g3g4g_msim">Ensisijainen verkkotila (%1$s)</string>
   <string name="toggleNfc">NFC</string>
   <!-- Wi-Fi region code -->
   <string name="wifi_setting_countrycode_title">Wi\u2011Fi\u2011aluekoodi</string>
@@ -172,6 +173,18 @@
   <string name="wifi_setting_countrycode_summary">Aseta Wi\u2011Fin aluekoodi</string>
   <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
   <string name="wifi_setting_countrycode_error">Ongelma aluekoodia asetettaessa.</string>
+  <string name="wifi_countrycode_us">Yhdysvallat</string>
+  <string name="wifi_countrycode_ca">Kanada, Taiwan</string>
+  <string name="wifi_countrycode_de">Saksa</string>
+  <string name="wifi_countrycode_gb">Eurooppa</string>
+  <string name="wifi_countrycode_jp">Japani, Venäjä</string>
+  <string name="wifi_countrycode_au">Australia</string>
+  <string name="wifi_countrycode_cn">Kiina</string>
+  <string name="wifi_countrycode_kr">Korea</string>
+  <string name="wifi_countrycode_tr">Etelä-Afrikka, Turkki</string>
+  <string name="wifi_countrycode_sg">Israel, Singapore</string>
+  <string name="wifi_countrycode_br">Brasilia</string>
+  <string name="wifi_countrycode_in">Intia</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">Poista</string>
   <string name="profile_action_none">Ei muutoksia</string>
@@ -260,6 +273,7 @@
   <!-- Lights settings, LED notification -->
   <string name="led_notification_title">Valoasetukset</string>
   <string name="led_notification_text">LED-valo otettu käyttöön asetuksissa</string>
+  <string name="notification_light_no_apps_summary">Lisätäksesi sovelluskohtaisen hallinnan, ota \'%1$s\' käyttöön ja paina \'\u002b\' valikkopalkista</string>
   <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
   <string name="enable_adb_cm">Android-vianetsintä</string>
   <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
@@ -429,6 +443,7 @@
   <string name="app_ops_allowed_count">Sallittu <xliff:g id="count" example="2 times">%s</xliff:g></string>
   <string name="app_ops_ignored_count">Estetty <xliff:g id="count" example="2 times">%s</xliff:g></string>
   <string name="app_ops_both_count">Sallittu <xliff:g id="count">%1$s</xliff:g>, estetty <xliff:g id="count">%2$s</xliff:g></string>
+  <string name="app_ops_disabled_by_optimization">Poistettu käytöstä akun optimoimiseksi</string>
   <!-- App ops menu options -->
   <string name="app_ops_show_user_apps">Näytä käyttäjän sovellukset</string>
   <string name="app_ops_show_system_apps">Näytä järjestelmäsovellukset</string>
@@ -515,6 +530,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Näytön navigointipalkki</string>
   <string name="disable_navkeys_summary">Ota näytön navigointipalkki käyttöön ja poista fyysiset näppäimet käytöstä</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Herätys kaksoisnapautuksella</string>
+  <string name="double_tap_to_wake_summary">Herätä laitteen näyttö kaksoisnapautuksella</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Lepotila kaksoisnapautuksella</string>
   <string name="double_tap_to_sleep_summary">Sulje laitteen näyttö tuplanapauttamalla tilapalkkia</string>
@@ -538,14 +556,6 @@
   <string name="color_red_title">Punainen</string>
   <string name="color_green_title">Vihreä</string>
   <string name="color_blue_title">Sininen</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Gammakalibrointi</string>
-  <string name="gamma_tuning_summary_head">Muokkaa gamma-arvoja</string>
-  <string name="gamma_tuning_control_set_header">Ryhmä <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Kontrasti</string>
-  <string name="gamma_tuning_brightness">Kirkkaus</string>
-  <string name="gamma_tuning_saturation">Kylläisyys</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Käynnistä musiikkisovellus</string>
   <string name="headset_connect_player_summary">Käynnistä musiikkisovellus kytkettäessä kuulokkeet</string>
@@ -576,6 +586,9 @@
   <string name="saturation_str">Kylläisyys: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">Kontrasti: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">Intensiteetti: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">Standardi</string>
+  <string name="screen_color_vivid">Eloisa</string>
+  <string name="screen_color_custom">Mukautettu</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimoi näyttösi kellonajan ja ympäristöolosuhteiden perusteella parantaaksesi luettavuutta ja vähentääksesi silmien rasitusta</string>
   <string name="live_display_mode">Näyttötila</string>
@@ -993,4 +1006,67 @@
   <string name="battery_info_status_charging_dock_ac">Ladataan telakan laturilla</string>
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
   <string name="battery_info_status_charging_dock_usb">Ladataan telakan USB:n kautta</string>
+  <string name="restrict_app_wlan_title">Poista sovelluksen Wi\u2011Fi:n käyttö</string>
+  <string name="restrict_app_wlan_summary">Estä sovellusta käyttämästä Wi\u2011Fi-yhteyttä</string>
+  <string name="restrict_app_cellular_title">Estä sovelluksen mobiilidatan käyttö</string>
+  <string name="restrict_app_cellular_summary">Estä sovellusta käyttämästä mobiilidatayhteyttä</string>
+  <string name="privacy_guard_internet_category">Internet</string>
+  <!-- Weather -->
+  <string name="weather_settings_title">Sää</string>
+  <string name="weather_settings_no_services_prompt">Säätarjoajapalveluita ei asennettu</string>
+  <string name="weather_settings_button">Tarjoajan asetukset</string>
+  <string name="weather_settings_activity_not_found">Tämän palveluntarjoajan asetusvalikon avaaminen ei onnistu</string>
+  <string name="weather_settings_add_weather_provider">Lisää sääpalveluntarjoaja</string>
+  <string name="weather_settings_general_settings_title">Yleiset</string>
+  <string name="weather_settings_providers_title">Palveluntarjoajat</string>
+  <string name="weather_settings_temp_units_title">Lämpötilan yksikkö</string>
+  <string name="weather_settings_temp_celsius">Celsius</string>
+  <string name="weather_settings_temp_fahrenheit">Fahrenheit</string>
+  <string name="weather_settings_keyword">sää</string>
+  <string name="background_data_access">Taustatiedonsiirron käyttö</string>
+  <string name="allow_background_both">Mobiiliverkon &amp; Wi\u2011Fin yli</string>
+  <string name="allow_background_wlan">Vain Wi\u2011Fin yli</string>
+  <string name="allow_background_none">Ei käyttöoikeutta</string>
+  <string name="mobile_data_alert">Mobiilidatan hälytys</string>
+  <string name="mobile_data_alert_summary">Ilmoita kun sovellus käyttää huomattavan määrän dataa</string>
+  <string name="data_usage_menu_enable_data_alerts">Ota datan käytön hälytykset käyttöön</string>
+  <string name="data_usage_menu_disable_data_alerts">Poista datan käytön hälytykset käytöstä</string>
+  <string name="data_usage_menu_reset_stats">Nollaa datan käytön tilastot</string>
+  <string name="reset_data_stats_msg">Tämä poistaa aiemmat ja nykyiset datan seurantatiedot</string>
+  <string name="reset_stats_confirm">Vahvista</string>
+  <string name="restrict_cellular_access_title">Rajoita mobiilidatan käyttöä</string>
+  <string name="restrict_cellular_access_summary">Poista datan käyttö mobiiliverkoissa</string>
+  <string name="restrict_cellular_access_dialog_title">Rajoita mobiilidatan käyttöä?</string>
+  <string name="restrict_cellular_access_dialog_summary">Tämä ominaisuus voi aiheuttaa verkkoyhteydestä riippuvaisen sovelluksen toiminnan lakkaamisen kun vain mobiilidataverkko on käytettävissä.\n\nLöydät lisää tiedonsiirron hallintaominaisuuksia sovelluksesta.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Verkko-operaattorit</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Sumennettu tausta</string>
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Näytä sää</string>
+  <!-- Per app controls for LP keyguard notifications -->
+  <string name="app_notification_show_on_keyguard_title">Näytä lukitusnäytöllä</string>
+  <string name="app_notification_show_on_keyguard_summary">Näytä tämän sovelluksen ilmoitukset lukitusnäytöllä</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">Älä näytä pysyviä ilmoituksia lukitusnäytöllä</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">Älä koskaan näytä pysyviä ilmoituksia tästä sovelluksesta lukitusnäytöllä</string>
+  <!-- CmRadioInfo -->
+  <string name="cm_radio_info_label">Parannettu radion ohjaus</string>
+  <!-- Radio Control (IMS/MBN etc.) -->
+  <string name="cm_radio_info_mbn_auto_load_on_label">Poista MBN auto load käytöstä</string>
+  <string name="cm_radio_info_mbn_auto_load_off_label">Ota MBN auto load käyttöön</string>
+  <string name="cm_radio_info_volte_avail_ovr_on_label">Poista VoLTE debug käytöstä</string>
+  <string name="cm_radio_info_volte_avail_ovr_off_label">Ota VoLTE debug käyttöön</string>
+  <string name="cm_radio_info_vt_avail_ovr_on_label">Poista VT debug käytöstä</string>
+  <string name="cm_radio_info_vt_avail_ovr_off_label">Ota VT debug käyttöön</string>
+  <string name="cm_radio_info_wfc_avail_ovr_on_label">Poista WFC debug käytöstä</string>
+  <string name="cm_radio_info_wfc_avail_ovr_off_label">Ota WFC debug käyttöön</string>
+  <string name="cm_radio_info_adb_log_on_label">Poista ADB radio log käytöstä</string>
+  <string name="cm_radio_info_adb_log_off_label">Ota ADB radio log käyttöön</string>
+  <string name="cm_radio_info_diag_log_on_label">Poista Diag log käytöstä</string>
+  <string name="cm_radio_info_diag_log_off_label">Ota Diag log käyttöön</string>
+  <!-- Lock screen wallpaper -->
+  <string name="lockscreen_wallpaper_title">Taustakuva</string>
+  <string name="not_available_with_app">Ei käytettävissä sovelluksessa %1$s</string>
+  <!-- Format string for fingerprint location message -->
+  <!-- Fingerprint sensor locations -->
 </resources>

@@ -166,6 +166,7 @@
   <string name="toggleData">Datové připojení</string>
   <string name="toggleSync">Auto. synch. data</string>
   <string name="toggle2g3g4g">Upřednostňovaný typ sítě</string>
+  <string name="toggle2g3g4g_msim">Upřednostňovaný typ sítě (%1$s)</string>
   <string name="toggleNfc">NFC</string>
   <!-- Wi-Fi region code -->
   <string name="wifi_setting_countrycode_title">Kód regionu Wi\u2011Fi</string>
@@ -173,6 +174,18 @@
   <string name="wifi_setting_countrycode_summary">Zadejte kód regionu Wi\u2011Fi</string>
   <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
   <string name="wifi_setting_countrycode_error">Při nastavení kódu regionu došlo k problému.</string>
+  <string name="wifi_countrycode_us">Spojené státy</string>
+  <string name="wifi_countrycode_ca">Kanada, Taiwan</string>
+  <string name="wifi_countrycode_de">Německo</string>
+  <string name="wifi_countrycode_gb">Evropa</string>
+  <string name="wifi_countrycode_jp">Japonsko, Rusko</string>
+  <string name="wifi_countrycode_au">Austrálie</string>
+  <string name="wifi_countrycode_cn">Čína</string>
+  <string name="wifi_countrycode_kr">Korea</string>
+  <string name="wifi_countrycode_tr">Jižní Afrika, Turecko</string>
+  <string name="wifi_countrycode_sg">Izrael, Singapur</string>
+  <string name="wifi_countrycode_br">Brazílie</string>
+  <string name="wifi_countrycode_in">Indie</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">Smazat</string>
   <string name="profile_action_none">Ponechat nezměněné</string>
@@ -261,6 +274,7 @@
   <!-- Lights settings, LED notification -->
   <string name="led_notification_title">Nastavení světelné signalizace</string>
   <string name="led_notification_text">LED světlo povolené v nastavení</string>
+  <string name="notification_light_no_apps_summary">Chcete-li přidat řízení jednotlivých aplikací, aktivujte „%1$s“ a použijte tlačítko „\u002b“ v panelu nabídky</string>
   <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
   <string name="enable_adb_cm">Ladění systému Android</string>
   <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
@@ -430,6 +444,7 @@
   <string name="app_ops_allowed_count">Povoleno <xliff:g id="count" example="2 times">%s</xliff:g></string>
   <string name="app_ops_ignored_count">Zakázáno <xliff:g id="count" example="2 times">%s</xliff:g></string>
   <string name="app_ops_both_count">Povoleno <xliff:g id="count">%1$s</xliff:g>, zakázáno <xliff:g id="count">%2$s</xliff:g></string>
+  <string name="app_ops_disabled_by_optimization">Zakázáno optimalizací baterie</string>
   <!-- App ops menu options -->
   <string name="app_ops_show_user_apps">Zobrazit uživatelské aplikace</string>
   <string name="app_ops_show_system_apps">Zobrazit systémové aplikace</string>
@@ -516,6 +531,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Povolit navigační lištu na obrazovce</string>
   <string name="disable_navkeys_summary">Povolit navigační lištu na obrazovce a zakázat hardwarová tlačítka</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Probuzení dvojím dotykem</string>
+  <string name="double_tap_to_wake_summary">Dvojitým poklepáním zapnout obrazovku</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Dvojím klepnutím uspat</string>
   <string name="double_tap_to_sleep_summary">Dvojitým poklepáním na stavovou lištu vypnout obrazovku</string>
@@ -539,14 +557,6 @@
   <string name="color_red_title">Červená</string>
   <string name="color_green_title">Zelená</string>
   <string name="color_blue_title">Modrá</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Gamma kalibrace</string>
-  <string name="gamma_tuning_summary_head">Přizpůsobení hodnot gamma</string>
-  <string name="gamma_tuning_control_set_header">Skupina <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Kontrast</string>
-  <string name="gamma_tuning_brightness">Jas</string>
-  <string name="gamma_tuning_saturation">Sytost</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Spustit aplikaci pro přehrávání hudby</string>
   <string name="headset_connect_player_summary">Pokud jsou připojena sluchátka, spustit výchozí aplikaci pro přehrávání hudby</string>
@@ -577,6 +587,9 @@
   <string name="saturation_str">Sytost: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">Kontrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">Intenzita: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">Standardní</string>
+  <string name="screen_color_vivid">Živé</string>
+  <string name="screen_color_custom">Vlastní</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimalizovat obrazovku podle denní doby a okolních podmínek pro lepší čitelnost a snížení namáhání očí</string>
   <string name="live_display_mode">Režim zobrazení</string>
@@ -685,8 +698,8 @@
   <string name="status_bar_notif_count_summary">Zobrazí počet nezobrazených upozornění v oznamovací oblasti</string>
   <string name="status_bar_quick_qs_pulldown_title">Rychlé stažení nabídky</string>
   <string name="status_bar_quick_qs_pulldown_summary">Tažením dolů z %1$s strany stavové lišty se vysune rychlé nastavení</string>
-  <string name="status_bar_quick_qs_pulldown_summary_left">Nalevo</string>
-  <string name="status_bar_quick_qs_pulldown_summary_right">Napravo</string>
+  <string name="status_bar_quick_qs_pulldown_summary_left">Vlevo</string>
+  <string name="status_bar_quick_qs_pulldown_summary_right">Vpravo</string>
   <string name="status_bar_quick_qs_pulldown_off">Vypnuto</string>
   <string name="status_bar_quick_qs_pulldown_left">Nalevo</string>
   <string name="status_bar_quick_qs_pulldown_right">Napravo</string>
@@ -993,4 +1006,65 @@
   <string name="battery_info_status_charging_dock_ac">Nabíjení pomocí napájení doku</string>
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
   <string name="battery_info_status_charging_dock_usb">Nabíjení pomocí USB doku</string>
+  <string name="restrict_app_wlan_title">Zakázat aplikaci používat Wi\u2011Fi</string>
+  <string name="restrict_app_wlan_summary">Zabrání aplikaci využívat datové připojení Wi\u2011Fi</string>
+  <string name="restrict_app_cellular_title">Zakázat aplikaci používat mobilní data</string>
+  <string name="restrict_app_cellular_summary">Zabrání aplikaci využívat datové připojení mobilních dat</string>
+  <string name="privacy_guard_internet_category">Internet</string>
+  <!-- Weather -->
+  <string name="weather_settings_title">Počasí</string>
+  <string name="weather_settings_no_services_prompt">Nejsou nainstalovány žádné služby poskytovatele počasí</string>
+  <string name="weather_settings_button">Nastavení poskytovatele</string>
+  <string name="weather_settings_activity_not_found">Nelze spustit nastavení tohoto poskytovatele</string>
+  <string name="weather_settings_add_weather_provider">Přidat poskytovatele počasí</string>
+  <string name="weather_settings_general_settings_title">Hlavní</string>
+  <string name="weather_settings_providers_title">Poskytovatelé</string>
+  <string name="weather_settings_temp_units_title">Jednotky teploty</string>
+  <string name="weather_settings_temp_celsius">Celsia</string>
+  <string name="weather_settings_temp_fahrenheit">Fahrenheita</string>
+  <string name="weather_settings_keyword">počasí</string>
+  <string name="background_data_access">Přístup k datům na pozadí</string>
+  <string name="allow_background_both">Přes mobilní data a Wi\u2011Fi</string>
+  <string name="allow_background_wlan">Pouze přes Wi\u2011Fi</string>
+  <string name="allow_background_none">Bez přístupu</string>
+  <string name="mobile_data_alert">Upozornění mobilních dat</string>
+  <string name="mobile_data_alert_summary">Upozornit, pokud aplikace využije veliké množství přenášených dat</string>
+  <string name="data_usage_menu_enable_data_alerts">Povolit upozornění využití dat</string>
+  <string name="data_usage_menu_disable_data_alerts">Zakázat upozornění využití dat</string>
+  <string name="data_usage_menu_reset_stats">Vyčistit statistiku přenesených dat</string>
+  <string name="reset_data_stats_msg">Tímto dojde k vymazání všech minulých i aktuálních sledovacích informací</string>
+  <string name="reset_stats_confirm">Potvrdit</string>
+  <string name="restrict_cellular_access_title">Omezit přístup k mobilním datům</string>
+  <string name="restrict_cellular_access_summary">Zakázat přístup k datům na mobilních sítích</string>
+  <string name="restrict_cellular_access_dialog_title">Omezit přístup k mobilním datům?</string>
+  <string name="restrict_cellular_access_dialog_summary">Tato vlastnost může způsobit zastavení funkčnosti některých aplikací, které jsou závislé na přístupu k datům a zařízení je právě připojeno pouze k mobilní datové síti.\n\nVhodnějsí omezení využití dat je možné nalézt v ovládání používání datových sítí v nastavení aplikace.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Síťový poskytovatelé</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Rozostření pozadí</string>
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Zobrazit počasí</string>
+  <!-- Per app controls for LP keyguard notifications -->
+  <string name="app_notification_show_on_keyguard_title">Zobrazit na zamykací obrazovce</string>
+  <string name="app_notification_show_on_keyguard_summary">Zobrazit upozornění z aplikace na zamykací obrazovce</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">Zakázat trvalé upozornění na zamykací obrazovce</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">Nikdy nezobrazovat trvalé upozornění na zamykací obrazovce</string>
+  <!-- CmRadioInfo -->
+  <string name="cm_radio_info_label">Rozšířené řízení rádia</string>
+  <!-- Radio Control (IMS/MBN etc.) -->
+  <string name="cm_radio_info_mbn_auto_load_on_label">Vypnout automatické spuštění MBN</string>
+  <string name="cm_radio_info_mbn_auto_load_off_label">Zapnout automatické spuštění MBN</string>
+  <string name="cm_radio_info_volte_avail_ovr_on_label">Vypnout VoLTE ladění</string>
+  <string name="cm_radio_info_volte_avail_ovr_off_label">Zapnout VoLTE ladění</string>
+  <string name="cm_radio_info_vt_avail_ovr_on_label">Vypnout VT ladění</string>
+  <string name="cm_radio_info_vt_avail_ovr_off_label">Zapnout VT ladění</string>
+  <string name="cm_radio_info_wfc_avail_ovr_on_label">Vypnout WFC ladění</string>
+  <string name="cm_radio_info_wfc_avail_ovr_off_label">Zapnout WFC ladění</string>
+  <string name="cm_radio_info_adb_log_on_label">Vypnout protokol ADB radio</string>
+  <string name="cm_radio_info_adb_log_off_label">Zapnout protokol ADB radio</string>
+  <string name="cm_radio_info_diag_log_on_label">Vypnout protokol Diag</string>
+  <string name="cm_radio_info_diag_log_off_label">Zapnout protokol Diag</string>
+  <!-- Lock screen wallpaper -->
+  <!-- Format string for fingerprint location message -->
+  <!-- Fingerprint sensor locations -->
 </resources>

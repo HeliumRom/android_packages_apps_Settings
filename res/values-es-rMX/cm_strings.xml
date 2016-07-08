@@ -143,6 +143,7 @@
   <!-- Settings main menu entry -->
   <!-- Power menu -->
   <!-- Buttons - Enable navbar -->
+  <!-- tap-to-wake -->
   <!-- tap-to-sleep -->
   <!-- Proximity wake -->
   <!-- Turn on display when power connected; turn off display when power disconnected -->
@@ -151,8 +152,6 @@
   <!-- Volume settings - Volume adjustment sound -->
   <!-- Hardware tunables - Vibrator intensity -->
   <!-- Hardware tunables - Color calibration -->
-  <!-- Hardware tunables - Gamma calibration -->
-  <!-- used if no name provided by overlay -->
   <!-- Launch music player when headset is connected -->
   <!-- WiFi auto-configure priorities -->
   <!-- Display : Rotation  -->
@@ -225,7 +224,6 @@
   <!-- Anonymous Statistics - Preview -->
   <!-- Protected apps lockpattern reset button -->
   <!-- Protected Apps -->
-  <string name="protected_apps_summary">Administrar aplicaciones que se ocultan detrás de un bloqueo seguro</string>
   <string name="pa_pattern_or_fingerprint_header">Debe dibujar el patrón o utilizar huellas digitales para desbloquear</string>
   <!-- Contributors cloud activity -->
   <string name="contributor_info_msg">
@@ -295,4 +293,14 @@
   <!-- Dock battery not present message -->
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging on Dock AC. -->
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
+  <!-- Weather -->
+  <!-- Label for settings shortcut: carrier selection -->
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <!-- Per app controls for LP keyguard notifications -->
+  <!-- CmRadioInfo -->
+  <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
+  <!-- Format string for fingerprint location message -->
+  <!-- Fingerprint sensor locations -->
 </resources>

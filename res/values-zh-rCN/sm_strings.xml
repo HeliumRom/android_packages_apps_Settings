@@ -20,6 +20,15 @@
   <string name="status_bar_network_traffic_style_up">显示上传速度</string>
   <string name="status_bar_network_traffic_style_down">显示下载速度</string>
   <string name="status_bar_network_traffic_style_all">显示上传和下载速度</string>
+  <string name="show_status_bar_carrier_title">运营商名称</string>
+  <string name="show_status_bar_carrier_summary">在状态栏显示运营商名称</string>
+  <string name="custom_carrier_label_title">自定义运营商名称</string>
+  <string name="custom_carrier_label_explain">请输入新的运营商名称，留空为恢复默认运营商名称。</string>
+  <string name="custom_carrier_label_notset">当前没有设置运营商名称</string>
+  <string name="show_carrier_speed_title">运营商字体大小</string>
+  <string name="carrier_size_style_normal">正常</string>
+  <string name="carrier_size_style_small">小</string>
+  <string name="carrier_size_style_big">大</string>
   <string name="suda_version">HeliumRom版本</string>
   <string name="suda_version_default">未知</string>
   <string name="advanced_device_info_title">硬件信息</string>
@@ -42,6 +51,18 @@
   <string name="shake_clean_notification_summary">通知栏通知晃动清理</string>
   <string name="clock_second_title">时间显示秒</string>
   <string name="clock_second_summary">让时间精确到秒</string>
+  <string name="recents_options">最近任务</string>    
+  <string name="recents_options_title">最近任务设置</string>
+  <string name="recents_panel_settings">最近任务面板设置</string>
+  <string name="show_clear_all_recents_button_title">一键清理按钮</string>
+  <string name="show_clear_all_recents_button_summary">在最近任务面板显示一键清理按钮</string>
+  <string name="recents_clear_all_location_title">一键清理按钮位置</string>
+  <string name="recents_clear_all_location_top_right">右上方</string>
+  <string name="recents_clear_all_location_top_left">左上方</string>
+  <string name="recents_clear_all_location_top_center">上方中央</string>    
+  <string name="recents_clear_all_location_bottom_right">右下方</string>
+  <string name="recents_clear_all_location_bottom_left">左下方</string>
+  <string name="recents_clear_all_location_bottom_center">下方中央</string>
   <string name="captive_portal_detection">网络状况检测</string>
   <string name="captive_portal_detection_summary">如果状态栏有感叹号，可关闭网络状况检测</string>
   <string name="mod_version_type">类型</string>
@@ -55,5 +76,8 @@
   <string name="show_chinese_date">锁屏显示农历</string>
   <string name="hardware_keys_action_screenshot">屏幕截图</string>
   <string name="hardware_keys_action_reboot_menu">高级重启</string>
-
+  <string name="lockscreen_settings_title">锁屏壁纸设置</string>
+  <string name="lockscreen_wallpaper_title">锁屏壁纸</string>
+  <string name="lockscreen_wallpaper_set_title">设置锁屏壁纸</string>
+  <string name="lockscreen_wallpaper_clear_title">清除锁屏壁纸</string>
 </resources>

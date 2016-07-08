@@ -164,6 +164,7 @@
   <string name="toggleData">การเชื่อมต่อข้อมูล</string>
   <string name="toggleSync">ซิงค์ข้อมูลอัตโนมัติ</string>
   <string name="toggle2g3g4g">ประเภทเครือข่ายที่ต้องการ</string>
+  <string name="toggle2g3g4g_msim">ประเภทเครือข่ายที่ต้องการ (%1$s)</string>
   <string name="toggleNfc">NFC</string>
   <!-- Wi-Fi region code -->
   <string name="wifi_setting_countrycode_title">รหัสภูมิภาค Wi\u2011Fi</string>
@@ -171,6 +172,18 @@
   <string name="wifi_setting_countrycode_summary">ระบุรหัสภูมิภาคสำหรับ Wi\u2011Fi</string>
   <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
   <string name="wifi_setting_countrycode_error">มีปัญหาขณะตั้งรหัสภูมิภาค</string>
+  <string name="wifi_countrycode_us">สหรัฐอเมริกา</string>
+  <string name="wifi_countrycode_ca">แคนาดา ไต้หวัน</string>
+  <string name="wifi_countrycode_de">เยอรมันนี</string>
+  <string name="wifi_countrycode_gb">ยุโรป</string>
+  <string name="wifi_countrycode_jp">ญี่ปุ่น, รัสเซีย</string>
+  <string name="wifi_countrycode_au">ออสเตรเลีย</string>
+  <string name="wifi_countrycode_cn">จีน</string>
+  <string name="wifi_countrycode_kr">เกาหลี</string>
+  <string name="wifi_countrycode_tr">แอฟริกาใต้ ตุรกี</string>
+  <string name="wifi_countrycode_sg">อิสราเอล สิงคโปร์</string>
+  <string name="wifi_countrycode_br">บราซิล</string>
+  <string name="wifi_countrycode_in">อินเดีย</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">ลบ</string>
   <string name="profile_action_none">ไม่บันทึกการเปลี่ยนแปลง</string>
@@ -259,6 +272,7 @@
   <!-- Lights settings, LED notification -->
   <string name="led_notification_title">ตั้งค่าความสว่าง</string>
   <string name="led_notification_text">เปิดใช้งาน LED จากการตั้งค่า</string>
+  <string name="notification_light_no_apps_summary">เพื่อเพิ่มการควบคุมแอป เปิดใช้ \'%1$s\' และกด \'\u002b\' บนแถบเมนู</string>
   <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
   <string name="enable_adb_cm">แก้ไขข้อบกพร่องแอนดรอยด์</string>
   <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
@@ -319,15 +333,39 @@
   <string name="app_ops_summaries_media_volume">ระดับเสียงสื่อ</string>
   <string name="app_ops_summaries_alarm_volume">ระดับเสียงปลุก</string>
   <string name="app_ops_summaries_notification_volume">ระดับเสียงแจ้งเตือน</string>
+  <string name="app_ops_summaries_bluetooth_volume">ระดับเสียงบลูทูธ</string>
   <string name="app_ops_summaries_keep_awake">เปิดจอค้าง</string>
   <string name="app_ops_summaries_monitor_location">ตรวจสอบตำแหน่งที่ตั้ง</string>
   <string name="app_ops_summaries_monitor_high_power_location">ตรวจสอบพิกัดที่ตั้งพลังงานสูง</string>
+  <string name="app_ops_summaries_get_usage_stats">ดูสถิติการใช้งาน</string>
   <string name="app_ops_summaries_mute_unmute_microphone">เปิด/ปิด ไมโครโฟน</string>
   <string name="app_ops_summaries_toast_window">แสดงกล่องข้อความ</string>
   <string name="app_ops_summaries_project_media">สื่อโครงการ</string>
   <string name="app_ops_summaries_activate_vpn">เปิดใช้งาน VPN</string>
+  <string name="app_ops_summaries_write_wallpaper">เปลี่ยนภาพพื้นหลัง</string>
+  <string name="app_ops_summaries_assist_structure">แอปผู้ช่วย</string>
+  <string name="app_ops_summaries_assist_screenshot">ช่วยจับหน้าจอ</string>
+  <string name="app_ops_summaries_read_phone_state">อ่านสถานะโทรศัพท์</string>
+  <string name="app_ops_summaries_add_voicemail">เพิ่มข้อความเสียง</string>
+  <string name="app_ops_summaries_use_sip">ใช้ SIP</string>
+  <string name="app_ops_summaries_make_call">ทำการโทร</string>
+  <string name="app_ops_summaries_use_fingerprint">ใช้ลายนิ้วมือ</string>
+  <string name="app_ops_summaries_use_body_sensors">ใช้เซนเซอร์ตรวจร่างกาย</string>
+  <string name="app_ops_summaries_read_cell_broadcasts">อ่านการติดต่อเครือข่าย</string>
+  <string name="app_ops_summaries_mock_location">จำลองสถานที่</string>
+  <string name="app_ops_summaries_read_external_storage">อ่านที่เก็บข้อมูลภายนอก</string>
+  <string name="app_ops_summaries_write_external_storage">เขียนที่เก็บข้อมูลภายนอก</string>
+  <string name="app_ops_summaries_turn_screen_on">เปิดหน้าจอ</string>
+  <string name="app_ops_summaries_get_accounts">เข้าถึงบัญชี</string>
+  <string name="app_ops_summaries_toggle_wifi">สลับ Wi-Fi</string>
+  <string name="app_ops_summaries_toggle_bluetooth">สลับบลูทูธ</string>
+  <string name="app_ops_summaries_start_at_boot">เริ่มต้นเมื่อบูต</string>
+  <string name="app_ops_summaries_toggle_nfc">สลับ NFC</string>
+  <string name="app_ops_summaries_toggle_mobile_data">สลับข้อมูลโทรศัพท์มือถือ</string>
   <string name="app_ops_summaries_superuser">สิทธิผู้ดูแลระบบ</string>
   <!-- User display names for app ops codes - extension of AOSP -->
+  <string name="app_ops_labels_coarse_location">พิกัดที่ตั้งหยาบ</string>
+  <string name="app_ops_labels_fine_location">พิกัดที่ตั้งละเอียด</string>
   <string name="app_ops_labels_gps">GPS</string>
   <string name="app_ops_labels_vibrate">สั่น</string>
   <string name="app_ops_labels_read_contacts">อ่านรายชื่อ</string>
@@ -336,11 +374,19 @@
   <string name="app_ops_labels_modify_call_log">แก้ไขประวัติการโทร</string>
   <string name="app_ops_labels_read_calendar">อ่านปฏิทิน</string>
   <string name="app_ops_labels_modify_calendar">แก้ไขปฏิทิน</string>
+  <string name="app_ops_labels_wifi_scan">ค้นหา Wi-Fi</string>
   <string name="app_ops_labels_notification">แจ้งเตือน/แสดงข้อความ</string>
+  <string name="app_ops_labels_cell_scan">ค้นหาเครือข่ายมือถือ</string>
   <string name="app_ops_labels_call_phone">โทรออก</string>
+  <string name="app_ops_labels_read_sms">อ่านข้อความ</string>
+  <string name="app_ops_labels_write_sms">เขียนข้อความ</string>
   <string name="app_ops_labels_receive_sms">รับข้อความ SMS</string>
+  <string name="app_ops_labels_receive_emergency_sms">รับข้อความฉุกเฉิน</string>
   <string name="app_ops_labels_receive_mms">รับข้อความ MMS</string>
+  <string name="app_ops_labels_receive_wap_push">รับ WPA push</string>
   <string name="app_ops_labels_send_sms">ส่งข้อความ SMS</string>
+  <string name="app_ops_labels_read_icc_sms">อ่าน ICC SMS</string>
+  <string name="app_ops_labels_write_icc_sms">เขียน ICC SMS</string>
   <string name="app_ops_labels_modify_settings">ปรับเปลี่ยนการตั้งค่า</string>
   <string name="app_ops_labels_draw_on_top">แสดงทับแอปอื่น</string>
   <string name="app_ops_labels_access_notifications">การแจ้งเตือนการเข้าถึง</string>
@@ -359,6 +405,8 @@
   <string name="app_ops_labels_notification_volume">ระดับเสียงแจ้งเตือน</string>
   <string name="app_ops_labels_bluetooth_volume">ระดับเสียงบลูทูธ</string>
   <string name="app_ops_labels_keep_awake">เปิดจอค้าง</string>
+  <string name="app_ops_labels_monitor_location">ตรวจสอบตำแหน่งที่ตั้ง</string>
+  <string name="app_ops_labels_monitor_high_power_location">ตรวจสอบพิกัดที่ตั้งพลังงานสูง</string>
   <string name="app_ops_labels_get_usage_stats">ดูสถิติการใช้งาน</string>
   <string name="app_ops_labels_mute_unmute_microphone">เปิด/ปิด ไมโครโฟน</string>
   <string name="app_ops_labels_toast_window">แสดงกล่องข้อความ</string>
@@ -394,6 +442,7 @@
   <string name="app_ops_allowed_count">ให้อนุญาต <xliff:g id="count" example="2 times">%s</xliff:g></string>
   <string name="app_ops_ignored_count">ถูกปฏิเสธ <xliff:g id="count" example="2 times">%s</xliff:g></string>
   <string name="app_ops_both_count">ให้อนุญาต <xliff:g id="count">%1$s</xliff:g> ถูกปฏิเสธ <xliff:g id="count">%2$s</xliff:g></string>
+  <string name="app_ops_disabled_by_optimization">ถูกปิดเนื่องจากประสิทธิภาพของแบตเตอรี่</string>
   <!-- App ops menu options -->
   <string name="app_ops_show_user_apps">แสดงแอปของผู้ใช้</string>
   <string name="app_ops_show_system_apps">แสดงแอประบบ</string>
@@ -480,6 +529,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">เปิดใช้งานแถบนำทางบนหน้าจอ</string>
   <string name="disable_navkeys_summary">เปิดใช้งานแถบนำทางบนหน้าจอและปิดการใช้งานปุ่มฮาร์ดแวร์</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">แตะสองครั้งเพื่อเปิดจอ</string>
+  <string name="double_tap_to_wake_summary">แตะหน้าสองครั้งเพื่อเปิดหน้าจอ</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">แตะสองครั้งเพื่อปิดจอ</string>
   <string name="double_tap_to_sleep_summary">แตะสองครั้งที่แถบสถานะเพื่อปิดหน้าจอ</string>
@@ -503,14 +555,6 @@
   <string name="color_red_title">แดง</string>
   <string name="color_green_title">เขียว</string>
   <string name="color_blue_title">น้ำเงิน</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">การปรับเทียบแกมม่า</string>
-  <string name="gamma_tuning_summary_head">ปรับแต่งค่าแกมม่า</string>
-  <string name="gamma_tuning_control_set_header">กลุ่ม <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">สีตัด</string>
-  <string name="gamma_tuning_brightness">ความสว่าง</string>
-  <string name="gamma_tuning_saturation">ความอิ่มตัว</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">เปิดแอปเล่นเพลง</string>
   <string name="headset_connect_player_summary">เปิดแอปเล่นเพลงค่าเริ่มต้นเมื่อมีการเชื่อมต่อจากช่องหูฟัง</string>
@@ -541,6 +585,9 @@
   <string name="saturation_str">ความอิ่มตัว: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">ความเข้มจาง: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">ความเข้มข้น: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">มาตราฐาน</string>
+  <string name="screen_color_vivid">สดใส</string>
+  <string name="screen_color_custom">กำหนดเอง</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">ปรับหน้าความสว่างหน้าจอตามเวลาและแสงโดยรอบเพื่อทำให้อ่านได้ง่ายขึ้นและลดอาการปวดตา</string>
   <string name="live_display_mode">รูปแบบการแสดงผล</string>
@@ -826,7 +873,7 @@
   <string name="menu_hidden_apps_delete">รีเซ็ต</string>
   <string name="menu_hidden_apps_reset_lock">รีเซ็ตการล็อครูปแบบ</string>
   <string name="protected_apps">แอปที่ได้รับการปกป้อง</string>
-  <string name="protected_apps_summary">จัดการว่าแอปพลิเคชั่นใดที่จะซ่อนไว้ด้านหลังล็อคที่ปลอดภัย</string>
+  <string name="protected_apps_summary">จัดการว่าแอปใดที่จะซ่อนไว้ด้านหลังล็อคที่ปลอดภัย</string>
   <string name="saving_protected_components">กำลังบันทึกองค์ประกอบ\u2026</string>
   <string name="pa_login_username_hint">ชื่อผู้ใช้ (อีเมล)</string>
   <string name="pa_login_password_hint">รหัสผ่าน</string>
@@ -889,9 +936,13 @@
   <string name="sim_mobile_network_settings_title">การตั้งค่าซิม %d</string>
   <!-- Zen mode allowed event setting summary items -->
   <!-- [CHAR LIMIT=50] Like zen_mode_reminders, but part of a list, so lower case if needed-->
+  <string name="zen_mode_summary_reminders">การแจ้งเตือน</string>
   <!-- [CHAR LIMIT=50] Like zen_mode_events, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_events">กิจกรรม</string>
   <!-- [CHAR LIMIT=50] Like zen_mode_summary_selected_callers, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_callers">ผู้โทรที่เลือก</string>
   <!-- [CHAR LIMIT=50] Like zen_mode_summary_selected_messages, but part of a list, so lower case if needed -->
+  <string name="zen_mode_summary_selected_messages">ข้อความที่เลือก</string>
   <!-- About phone settings screen, setting option dialog title to show regulatory information [CHAR LIMIT=25] -->
   <!-- SAR information -->
   <string name="maximum_head_level">หัว: %1$s W/kg</string>
@@ -901,8 +952,11 @@
   <string name="ic_code_full">IC: %1$s</string>
   <string name="sim_ringtone_title">เสียงเรียกเข้าซิม %d</string>
   <!-- label for application name -->
+  <string name="app_name_label_cm">แอป:</string>
   <!-- label for last time used -->
+  <string name="last_time_used_label_cm">เวลาที่ใช้ล่าสุด:</string>
   <!-- label for usage time -->
+  <string name="usage_time_label_cm">เวลาการใช้งาน:</string>
   <!-- SD card & phone storage settings screen, message on screen after user selects Factory data reset [CHAR LIMIT=NONE] -->
   <string name="master_clear_desc_cm" product="tablet">สิ่งนี้จะลบข้อมูลทั้งหมดจาก<b>ที่เก็บข้อมูลภายใน</b>ของแท็บเล็ต รวมถึง\n\n<li>บัญชีอุปกรณ์ของคุณ</li>\n<li>ข้อมูลระบบและข้อมูลแอปและการตั้งค่า</li>\n<li>แอปที่ดาวน์โหลด</li></string>
   <!-- SD card & phone storage settings screen, message on screen after user selects Factory data reset [CHAR LIMIT=NONE] -->
@@ -919,17 +973,24 @@
   <string name="factory_reset_warning_text_reset_now">รีเซ็ตเดี๋ยวนี้</string>
   <string name="factory_reset_warning_text_message">บัญชี แอป ข้อมูลแอปและการตั้งค่าระบบทั้งหมดจะถูกลบจากอุปกรณ์นี้ การกระทำนี้ไม่สามารถย้อนกลับได้</string>
   <!-- Tethering & portable hotspot other category -->
+  <string name="tethering_other_category_text">อื่น ๆ</string>
   <!-- Wi-Fi tethering inactivity timeout -->
+  <string name="hotstpot_inactivity_timeout_text">หมดเวลาสัญญาณ Wi\u2011Fi</string>
   <string name="hotstpot_inactivity_timeout_never">ไม่ต้องเลย</string>
   <string name="hotstpot_inactivity_timeout_1_minute">1 นาที</string>
   <string name="hotstpot_inactivity_timeout_5_minutes">5 นาที</string>
   <string name="hotstpot_inactivity_timeout_10_minutes">10 นาที</string>
+  <string name="hotstpot_inactivity_timeout_never_summary_text">สัญญาณ Wi\u2011Fi แบบพกพาจะไม่หมดเวลา</string>
+  <string name="hotstpot_inactivity_timeout_summary_text">สัญญาณ Wi\u2011Fi แบบพกพาจะหมดเวลาหลังจาก <xliff:g id="timeout">%1$s</xliff:g></string>
   <!-- Live lock screen -->
   <!-- Live lock screen title -->
+  <string name="live_lock_screen_title">ใช้งานขณะหน้าจอล็อค</string>
   <!-- Live lock screen summary -->
+  <string name="live_lock_screen_summary">เปิดใช้งานและกำหนดค่าการใช้งานขณะหน้าจอล็อค</string>
   <!-- Live lock screen settings content description -->
   <string name="live_lock_screen_settings_button">การตั้งค่า</string>
   <!-- Live lock screen settings screen, caption for when live lock screens are disabled -->
+  <string name="live_lock_screen_settings_disabled_prompt">ในการดูหน้าจอที่ใช้งานได้ขณะล็อคอยู่ ให้เปิดใช้งานการใช้งานขณะหน้าจอล็อค</string>
   <string name="interruptions_ignore_while_media_title">ป้องกันการลดเสียง</string>
   <string name="interruptions_ignore_while_media_summary">ไม่ลดเสียงเพลงเมื่อมีการแจ้งเตือนเข้า</string>
   <!-- CM Legal -->
@@ -944,4 +1005,51 @@
   <string name="battery_info_status_charging_dock_ac">การชาร์จบนแท่น AC</string>
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
   <string name="battery_info_status_charging_dock_usb">การชาร์จผ่านแท่น USB</string>
+  <string name="restrict_app_wlan_title">ปิดการใช้ Wi\u2011Fi ของแอป</string>
+  <string name="restrict_app_wlan_summary">ป้องกันแอปจากการเชื่อมต่อข้อมูล Wi\u2011Fi</string>
+  <string name="restrict_app_cellular_title">ปิดการใช้งานทางโทรศัพท์ของแอป</string>
+  <string name="restrict_app_cellular_summary">ป้องกันแอปจากการใช้การเชื่อมต่อข้อมูลทางโทรศัพท์</string>
+  <string name="privacy_guard_internet_category">อินเทอร์เน็ต</string>
+  <!-- Weather -->
+  <string name="weather_settings_title">สภาพอากาศ</string>
+  <string name="weather_settings_no_services_prompt">ไม่มีผู้ให้บริการข้อมูลสภาพอากาศติดตั้งอยู่</string>
+  <string name="weather_settings_button">ตั้งค่าผู้ให้บริการ</string>
+  <string name="weather_settings_activity_not_found">ไม่สามารถเปิดการตั้งค่าของผู้ให้บริการนี้ได้</string>
+  <string name="weather_settings_add_weather_provider">เพิ่มผู้ให้บริการรายงานสภาพอากาศ</string>
+  <string name="weather_settings_general_settings_title">ทั่วไป</string>
+  <string name="weather_settings_providers_title">ผู้ให้บริการ</string>
+  <string name="weather_settings_temp_units_title">หน่วยอุณหภูมิ</string>
+  <string name="weather_settings_temp_celsius">เซลเซียส</string>
+  <string name="weather_settings_temp_fahrenheit">ฟาเรนไฮต์</string>
+  <string name="weather_settings_keyword">สภาพอากาศ</string>
+  <string name="background_data_access">เข้าถึงข้อมูลพื้นหลัง</string>
+  <string name="allow_background_both">ผ่านข้อมูลโทรศัพท์มือถือ &amp; Wi\u2011Fi</string>
+  <string name="allow_background_wlan">เฉพาะเมื่อใช้ Wi\u2011Fi เท่านั้น</string>
+  <string name="allow_background_none">ไม่เข้าถึง</string>
+  <string name="mobile_data_alert">แจ้งเตือนข้อมูลเครือข่าย</string>
+  <string name="mobile_data_alert_summary">แจ้งเตือนเมื่อแอปใช้ข้อมูลเครือข่ายเป็นจำนวนมาก</string>
+  <string name="data_usage_menu_enable_data_alerts">เปิดใช้งานแจ้งเตือนปริมาณข้อมูล</string>
+  <string name="data_usage_menu_disable_data_alerts">ปิดการใช้งานแจ้งเตือนปริมาณข้อมูล</string>
+  <string name="data_usage_menu_reset_stats">ล้างสถิติการใช้งานเครือข่าย</string>
+  <string name="reset_data_stats_msg">นี่จะล้างข้อมูลที่ถูกบันทึกไส้ตั้งแต่อดีตจนถึงปัจจุบัน</string>
+  <string name="reset_stats_confirm">ยืนยัน</string>
+  <string name="restrict_cellular_access_title">จำกัดการเข้าถึงข้อมูลโทรศัพท์มือถือ</string>
+  <string name="restrict_cellular_access_summary">ปิดใช้งานการเข้าถึงข้อมูลบนเครือข่ายมือถือ</string>
+  <string name="restrict_cellular_access_dialog_title">ต้องการจำกัดการเข้าถึงข้อมูลโทรศัพท์มือถือหรือไม่?</string>
+  <string name="restrict_cellular_access_dialog_summary">ความสามารถนี้อาจทำใหแอปที่ต้องใช้งานเครือข่ายหยุดทำงานเมื่อมีเพียงเครือข่ายมือถือเท่านั้นที่ใช้งานได้\n\nคุณสามารถตั้งการควบคุมข้อมูลให้เหมาะสมได้จากการตั้งค่าผ่านแอปเหล่านั้น</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">ผู้ให้บริการเครือข่าย</string>
+  <!-- title for lock screen blur preference -->
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">แสดงสภาพอากาศ</string>
+  <!-- Per app controls for LP keyguard notifications -->
+  <string name="app_notification_show_on_keyguard_title">แสดงบนหน้าจอล็อค</string>
+  <string name="app_notification_show_on_keyguard_summary">แสดงการแจ้งเตือนจากแอปนี้บนหน้าจอล็อค</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">ปิดใช้งานการแจ้งเตือนแบบถาวรบนหน้าจอล็อค</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">ไม่ต้องแสดงการแจ้งเตือนแบบถาวรจากแอปนี้บนหน้าจอล็อค</string>
+  <!-- CmRadioInfo -->
+  <!-- Radio Control (IMS/MBN etc.) -->
+  <!-- Lock screen wallpaper -->
+  <!-- Format string for fingerprint location message -->
+  <!-- Fingerprint sensor locations -->
 </resources>

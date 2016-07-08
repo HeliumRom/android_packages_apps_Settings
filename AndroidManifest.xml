@@ -86,6 +86,7 @@
     <uses-permission android:name="cyanogenmod.permission.MODIFY_PROFILES" />
     <uses-permission android:name="cyanogenmod.permission.PROTECTED_APP" />
     <uses-permission android:name="cyanogenmod.permission.PERFORMANCE_ACCESS" />
+    <uses-permission android:name="cyanogenmod.permission.MANAGE_LIVEDISPLAY" />
 
     <application android:label="@string/settings_label"
             android:icon="@mipmap/ic_launcher_settings"
@@ -393,6 +394,12 @@
                 android:parentActivityName="Settings">
         </activity>
 
+        <activity android:name=".SubSettings$SecuritySubSettings"
+                android:taskAffinity="com.android.settings"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:parentActivityName="Settings">
+        </activity>
+
         <activity android:name="Settings$BluetoothSettingsActivity"
                 android:label="@string/bluetooth_settings_title"
                 android:taskAffinity="">
@@ -527,6 +534,13 @@
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
                 android:value="true" />
         </activity>
+
+        <receiver android:name=".DateChangeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
 
         <activity android:name="DateTimeSettingsSetupWizard"
                   android:label="@string/date_and_time"
@@ -1959,6 +1973,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="CmRadioInfo" android:label="@string/cm_radio_info_label"
+            android:process="com.android.phone">
+            <intent-filter>
+                <action android:name="com.android.settings.OEM_RADIO_INFO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <!-- Suspect activity alias: targetActivity is Settings itself, does not define a name. Remove? -->
         <activity-alias android:name="ProxySelector"
             android:label="@string/proxy_settings_label"
@@ -2222,8 +2244,7 @@
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.settings.LIVEDISPLAY_SETTINGS" />
-                <action android:name="com.android.settings.LIVEDISPLAY_SETTINGS" />
+                <action android:name="cyanogenmod.settings.LIVEDISPLAY_SETTINGS" />
                 <category android:name="android.intent.category.VOICE_LAUNCH" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.SHORTCUT" />
@@ -2315,11 +2336,11 @@
                 android:label="@string/crypt_keeper_encrypt_title">
             <intent-filter android:priority="1">
                 <action android:name="android.app.action.START_ENCRYPTION" />
-                <category android:name="android.intent.category.DEFAULT" /> />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" /> />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.CryptKeeperSettings" />
@@ -2330,6 +2351,10 @@
         <activity android:name="Settings$DataUsageSummaryActivity"
                 android:label="@string/data_usage_summary_title"
                 android:taskAffinity="">
+            <intent-filter android:priority="1">
+                <action android:name="cyanogenmod.settings.ACTION_DATA_USAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -2471,7 +2496,7 @@
                        android:resource="@id/sound_settings" />
         </activity>
 
-        <activity android:name="Settings$SoundSettingsActivity"
+        <activity android:name="Settings$CMSoundSettingsActivity"
                 android:label="@string/notification_settings"
                 android:exported="true"
                 android:taskAffinity="">
@@ -2496,7 +2521,7 @@
         <activity-alias android:name="Settings$SoundSettingsActivity"
                 android:label="@string/notification_settings"
                 android:taskAffinity=""
-                android:targetActivity="Settings$SoundSettingsActivity">
+                android:targetActivity="Settings$CMSoundSettingsActivity">
             <intent-filter android:priority="1">
                 <action android:name="com.android.settings.SOUND_SETTINGS" />
                 <action android:name="android.settings.SOUND_SETTINGS" />
@@ -2759,6 +2784,23 @@
                        android:resource="@id/lockscreen_settings" />
         </activity>
 
+        <activity android:name=".Settings$LiveLockScreenSettingsActivity"
+                  android:label="@string/live_lock_screen_title"
+                  android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.SHORTCUT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="cyanogenmod.intent.action.OPEN_LIVE_LOCKSCREEN_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.settings.cyanogenmod.LiveLockScreenSettings" />
+        </activity>
+
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"
@@ -2859,6 +2901,27 @@
             <intent-filter>
                 <action android:name=".applications.LockPatternActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Weather Service Providers settings -->
+        <activity android:name="Settings$WeatherProviderServicesActivity"
+                  android:taskAffinity=""
+                  android:label="@string/weather_settings_title">
+            <intent-filter>
+                <action android:name="cyanogenmod.intent.action.MANAGE_WEATHER_PROVIDER_SERVICES" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.android.settings.cyanogenmod.WeatherServiceSettings" />
+        </activity>
+
+        <activity android:name=".CarrierSelection"
+                  android:label="@string/shortcut_carrier_title"
+                  android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
         </activity>
 

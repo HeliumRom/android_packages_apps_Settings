@@ -18,6 +18,9 @@
     <string name="suda_version">SudaMod Version</string>
     <string name="suda_version_default">Unknow</string>
 
+    <!-- Development settings -->
+    <string name="dexopt_lazy">Lazy dexopt</string>
+
     <!-- Show network speed -->
     <string name="show_network_speed_title">Network speed</string>
     <string name="show_network_speed_summary">Show network speed in status bar</string>
@@ -25,6 +28,18 @@
     <string name="status_bar_network_traffic_style_up">Outgoing</string>
     <string name="status_bar_network_traffic_style_down">Incoming</string>
     <string name="status_bar_network_traffic_style_all">Outgoing and incoming</string>
+
+    <!-- Show carrier label and custom -->
+    <string name="show_status_bar_carrier_title">Status bar carrier</string>
+    <string name="show_status_bar_carrier_summary">Show carrier in status bar</string>
+    <string name="custom_carrier_label_title">Custom carrier label</string>
+    <string name="custom_carrier_label_explain">Please enter a new label. Leave blank to revert to stock label.</string>
+    <string name="custom_carrier_label_notset">Custom label currently not set</string>
+    <string name="show_carrier_speed_title">Operators of font size</string>
+    <string name="carrier_size_style_normal">Normal</string>
+    <string name="carrier_size_style_small">Small</string>
+    <string name="carrier_size_style_big">Big</string>
+
     <!-- Gesture and Direct Control -->  
     <string name="gesture_title">Gesture</string>
     <string name="gesture_direct_title">Gesture and Direct Control</string>  
@@ -51,6 +66,20 @@
     <!-- clock second-->
     <string name="clock_second_title">Time display seconds</string>
     <string name="clock_second_summary">Let the time accurate to seconds</string>
+
+    <!-- Recents panel settings -->
+    <string name="recents_options">Recents Options</string>    
+    <string name="recents_options_title">Recents Options Settings</string>
+    <string name="recents_panel_settings">Recents panel settings</string>
+    <string name="show_clear_all_recents_button_title">Clear All Button Tweaks</string>
+    <string name="show_clear_all_recents_button_summary">Show clear all button on recents panel</string>
+    <string name="recents_clear_all_location_title">Clear all recents location</string>
+    <string name="recents_clear_all_location_top_right">Top right</string>
+    <string name="recents_clear_all_location_top_left">Top left</string>
+    <string name="recents_clear_all_location_top_center">Top center</string>    
+    <string name="recents_clear_all_location_bottom_right">Bottom right</string>
+    <string name="recents_clear_all_location_bottom_left">Bottom left</string>
+    <string name="recents_clear_all_location_bottom_center">Bottom center</string>
     <!-- Captive Portal -->
     <string name="captive_portal_detection">Captive portal detection</string>
     <string name="captive_portal_detection_summary">If disabled, a connection to google servers is not required in order to detect data connection.</string>	
@@ -68,4 +97,10 @@
     <!-- quick reboot menu and screenshot -->
     <string name="hardware_keys_action_screenshot">Screenshot</string>
     <string name="hardware_keys_action_reboot_menu">Reboot menu</string>
+
+    <!-- Lock screen settings -->
+    <string name="lockscreen_settings_title">Lockscreen wallpaper</string>
+    <string name="lockscreen_wallpaper_title">Wallpaper</string>
+    <string name="lockscreen_wallpaper_set_title">Set lock screen wallpaper</string>
+    <string name="lockscreen_wallpaper_clear_title">Clear lock screen wallpaper</string>
 </resources>

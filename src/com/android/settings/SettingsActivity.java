@@ -41,6 +41,7 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.Process;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.preference.Preference;
@@ -83,6 +84,8 @@ import com.android.settings.blacklist.BlacklistSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.contributors.ContributorsCloudFragment;
 import com.android.settings.cyanogenmod.DisplayRotation;
+import com.android.settings.cyanogenmod.LiveLockScreenSettings;
+import com.android.settings.cyanogenmod.WeatherServiceSettings;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.dashboard.DashboardTile;
@@ -136,6 +139,7 @@ import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 
+import cyanogenmod.app.CMContextConstants;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -294,7 +298,6 @@ public class SettingsActivity extends Activity
             R.id.home_settings,
             R.id.dashboard,
             R.id.privacy_settings_cyanogenmod,
-            R.id.button_settings
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -375,7 +378,9 @@ public class SettingsActivity extends Activity
             BlacklistSettings.class.getName(),
             ProfilesSettings.class.getName(),
             ContributorsCloudFragment.class.getName(),
-            NotificationManagerSettings.class.getName()
+            NotificationManagerSettings.class.getName(),
+            LiveLockScreenSettings.class.getName(),
+            WeatherServiceSettings.class.getName()
     };
 
 
@@ -637,7 +642,7 @@ public class SettingsActivity extends Activity
                     1 /* one home activity by default */);
         } else {
             if (!mIsShowingDashboard) {
-                mDisplaySearch = true;
+                mDisplaySearch = Process.myUid() == Process.SYSTEM_UID;
                 // UP will be shown only if it is a sub settings
                 if (mIsShortcut) {
                     mDisplayHomeAsUpEnabled = isSubSettings;
@@ -1325,6 +1330,14 @@ public class SettingsActivity extends Activity
                     boolean hasDeviceKeys = getResources().getInteger(
                             com.android.internal.R.integer.config_deviceHardwareKeys) != 0;
                     if (!hasDeviceKeys) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.weather_settings) {
+                    final boolean showWeatherMenu = getResources()
+                            .getBoolean(R.bool.config_showWeatherMenu);
+
+                    if (!getPackageManager().hasSystemFeature(
+                            CMContextConstants.Features.WEATHER_SERVICES) || !showWeatherMenu) {
                         removeTile = true;
                     }
                 }

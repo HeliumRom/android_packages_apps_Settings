@@ -201,6 +201,19 @@
     <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
     <string name="wifi_setting_countrycode_error">There was a problem setting the region code.</string>
 
+    <string name="wifi_countrycode_us">United States</string>
+    <string name="wifi_countrycode_ca">Canada, Taiwan</string>
+    <string name="wifi_countrycode_de">Germany</string>
+    <string name="wifi_countrycode_gb">Europe</string>
+    <string name="wifi_countrycode_jp">Japan, Russia</string>
+    <string name="wifi_countrycode_au">Australia</string>
+    <string name="wifi_countrycode_cn">China</string>
+    <string name="wifi_countrycode_kr">Korea</string>
+    <string name="wifi_countrycode_tr">South Africa, Turkey</string>
+    <string name="wifi_countrycode_sg">Israel, Singapore</string>
+    <string name="wifi_countrycode_br">Brazil</string>
+    <string name="wifi_countrycode_in">India</string>
+
     <!-- Profiles -->
     <string name="profile_menu_delete_title">Delete</string>
     <string name="profile_action_none">Leave unchanged</string>
@@ -304,6 +317,7 @@
     <!-- Lights settings, LED notification -->
     <string name="led_notification_title">Light settings</string>
     <string name="led_notification_text">LED light enabled by settings</string>
+    <string name="notification_light_no_apps_summary">To add per app control, activate \'%1$s\' and press \'\u002b\' on the menu bar</string>
 
     <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
     <string name="enable_adb_cm">Android debugging</string>
@@ -481,6 +495,7 @@
     <string name="app_ops_allowed_count">Allowed <xliff:g id="count" example="2 times">%s</xliff:g></string>
     <string name="app_ops_ignored_count">Denied <xliff:g id="count" example="2 times">%s</xliff:g></string>
     <string name="app_ops_both_count">Allowed <xliff:g id="count">%1$s</xliff:g>, denied <xliff:g id="count">%2$s</xliff:g></string>
+    <string name="app_ops_disabled_by_optimization">Disabled by battery optimization</string>
 
     <!-- App ops menu options -->
     <string name="app_ops_show_user_apps">Show user apps</string>
@@ -580,6 +595,10 @@
     <string name="disable_navkeys_title">Enable on-screen nav bar</string>
     <string name="disable_navkeys_summary">Enable on-screen navigation bar and disable hardware buttons</string>
 
+    <!-- tap-to-wake -->
+    <string name="double_tap_to_wake_title">Double-tap to wake</string>
+    <string name="double_tap_to_wake_summary">Double-tap on the screen to turn on the display</string>
+
     <!-- tap-to-sleep -->
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
     <string name="double_tap_to_sleep_summary">Double-tap on the status bar to turn off the display</string>
@@ -610,13 +629,6 @@
     <string name="color_green_title">Green</string>
     <string name="color_blue_title">Blue</string>
 
-    <!-- Hardware tunables - Gamma calibration -->
-    <string name="gamma_tuning_title_head">Gamma calibration</string>
-    <string name="gamma_tuning_summary_head">Tweak gamma values</string>
-    <string name="gamma_tuning_control_set_header">Group <xliff:g id="index">%d</xliff:g></string> <!-- used if no name provided by overlay -->
-    <string name="gamma_tuning_contrast">Contrast</string>
-    <string name="gamma_tuning_brightness">Brightness</string>
-    <string name="gamma_tuning_saturation">Saturation</string>
 
     <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Launch music app</string>
@@ -652,6 +664,10 @@
     <string name="saturation_str">Saturation: <xliff:g id="saturation_value">%1$s</xliff:g></string>
     <string name="contrast_str">Contrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
     <string name="intensity_str">Intensity: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+
+    <string name="screen_color_standard">Standard</string>
+    <string name="screen_color_vivid">Vivid</string>
+    <string name="screen_color_custom">Custom</string>
 
     <!-- LiveDisplay -->
     <string name="live_display_title" translatable="false">LiveDisplay</string>
@@ -1156,4 +1172,82 @@
     <string name="restrict_app_cellular_title">Disable app cellular usage</string>
     <string name="restrict_app_cellular_summary">Prevent app from using cellular data connection</string>
     <string name="privacy_guard_internet_category">Internet</string>
+
+    <!-- Weather -->
+    <string name="weather_settings_title">Weather</string>
+    <string name="weather_settings_no_services_prompt">No weather provider services installed</string>
+    <string name="weather_settings_button">Provider settings</string>
+    <string name="weather_settings_activity_not_found">Unable to launch the settings menu of this provider</string>
+    <string name="weather_settings_add_weather_provider">Add weather provider</string>
+    <string name="weather_settings_play_store_market_url" translatable="false">market://search?q=cyanogenmodweatherprovider&amp;c=apps</string>
+    <string name="weather_settings_play_store_http_url" translatable="false">http://play.google.com/store/search?q=cyanogenmodweatherprovider&amp;c=apps</string>
+    <string name="weather_settings_general_settings_title">General</string>
+    <string name="weather_settings_providers_title">Providers</string>
+    <string name="weather_settings_temp_units_title">Temperature unit</string>
+    <string name="weather_settings_temp_celsius">Celsius</string>
+    <string name="weather_settings_temp_fahrenheit">Fahrenheit</string>
+    <string name="weather_settings_keyword">weather</string>
+
+    <string name="background_data_access">Background data access</string>
+    <string name="allow_background_both">Over cellular data &amp; Wi\u2011Fi</string>
+    <string name="allow_background_wlan">Only over Wi\u2011Fi</string>
+    <string name="allow_background_none">No access</string>
+    <string name="mobile_data_alert">Cellular data alert</string>
+    <string name="mobile_data_alert_summary">Notify when the app uses a significant amount of data</string>
+    <string name="data_usage_menu_enable_data_alerts">Enable data usage alerts</string>
+    <string name="data_usage_menu_disable_data_alerts">Disable data usage alerts</string>
+    <string name="data_usage_menu_reset_stats">Reset data statistics</string>
+    <string name="reset_data_stats_msg">This will clear all past and present data tracking information</string>
+    <string name="reset_stats_confirm">Confirm</string>
+
+    <string name="restrict_cellular_access_title">Restrict cellular data access</string>
+    <string name="restrict_cellular_access_summary">Disable data access on cellular networks</string>
+    <string name="restrict_cellular_access_dialog_title">Restrict cellular data access?</string>
+    <string name="restrict_cellular_access_dialog_summary">This feature may cause an app that depends on network access to stop working when only cellular networks are available.\n\nYou can find more appropriate data usage controls in the settings available within the app.</string>
+
+    <!-- Label for settings shortcut: carrier selection -->
+    <string name="shortcut_carrier_title">Network operators</string>
+
+    <!-- title for lock screen blur preference -->
+    <string name="lockscreen_blur_enabled_title">Blur background</string>
+    <!-- title for lock screen weather preference -->
+    <string name="lockscreen_weather_enabled_title">Show weather</string>
+
+    <!-- Per app controls for LP keyguard notifications -->
+    <string name="app_notification_show_on_keyguard_title">Show on lock screen</string>
+    <string name="app_notification_show_on_keyguard_summary">Show notifications from this app on the lock screen</string>
+    <string name="app_notification_no_ongoing_on_keyguard_title">Disable persistent notification on lock screen</string>
+    <string name="app_notification_no_ongoing_on_keyguard_summary">Never show persistent notifications from this app on the lock screen</string>
+
+    <!-- CmRadioInfo -->
+    <string name="cm_radio_info_label">Enhanced radio control</string>
+
+    <!-- Radio Control (IMS/MBN etc.) -->
+    <string name="cm_radio_info_mbn_auto_load_on_label">Turn off MBN auto load</string>
+    <string name="cm_radio_info_mbn_auto_load_off_label">Turn on MBN auto load</string>
+    <string name="cm_radio_info_volte_avail_ovr_on_label">Turn off VoLTE debug</string>
+    <string name="cm_radio_info_volte_avail_ovr_off_label">Turn on VoLTE debug</string>
+    <string name="cm_radio_info_vt_avail_ovr_on_label">Turn off VT debug</string>
+    <string name="cm_radio_info_vt_avail_ovr_off_label">Turn on VT debug</string>
+    <string name="cm_radio_info_wfc_avail_ovr_on_label">Turn off WFC debug</string>
+    <string name="cm_radio_info_wfc_avail_ovr_off_label">Turn on WFC debug</string>
+    <string name="cm_radio_info_adb_log_on_label">Turn off ADB radio log</string>
+    <string name="cm_radio_info_adb_log_off_label">Turn on ADB radio log</string>
+    <string name="cm_radio_info_diag_log_on_label">Turn off Diag log</string>
+    <string name="cm_radio_info_diag_log_off_label">Turn on Diag log</string>
+
+    <!-- Lock screen wallpaper -->
+    <string name="lockscreen_wallpaper_title">Wallpaper</string>
+
+    <string name="not_available_with_app">Not available with %1$s</string>
+    <string name="blacklist_country_code_plus" translatable="false">+</string>
+
+    <!-- Format string for fingerprint location message -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_cm">Locate the fingerprint sensor on the <xliff:g id="sensor_location">%1$s</xliff:g> of your phone.</string>
+
+    <!-- Fingerprint sensor locations -->
+    <string name="security_settings_fingerprint_sensor_location_back">back</string>
+    <string name="security_settings_fingerprint_sensor_location_front">front</string>
+    <string name="security_settings_fingerprint_sensor_location_left">left side</string>
+    <string name="security_settings_fingerprint_sensor_location_right">right side</string>
 </resources>

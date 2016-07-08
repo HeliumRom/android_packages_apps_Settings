@@ -167,6 +167,7 @@
   <string name="toggleData">Podatkovna povezava</string>
   <string name="toggleSync">Samodejno sinhroniziraj podatke</string>
   <string name="toggle2g3g4g">Priljubljena vrsta omrežja</string>
+  <string name="toggle2g3g4g_msim">Priljubljena vrsta omrežja (%1$s)</string>
   <string name="toggleNfc">NFC</string>
   <!-- Wi-Fi region code -->
   <string name="wifi_setting_countrycode_title">Območna koda Wi\u2011Fi</string>
@@ -174,6 +175,18 @@
   <string name="wifi_setting_countrycode_summary">Določite območno kodo za Wi\u2011Fi</string>
   <!-- Wi-Fi settings screen, error message when the frequency band could not be set [CHAR LIMIT=50]. -->
   <string name="wifi_setting_countrycode_error">Pri nastavitvi območne kode je prišlo do težave.</string>
+  <string name="wifi_countrycode_us">Združene države</string>
+  <string name="wifi_countrycode_ca">Kanada, Tajvan</string>
+  <string name="wifi_countrycode_de">Nemčija</string>
+  <string name="wifi_countrycode_gb">Evropa</string>
+  <string name="wifi_countrycode_jp">Japonska, Rusija</string>
+  <string name="wifi_countrycode_au">Avstralija</string>
+  <string name="wifi_countrycode_cn">Kitajska</string>
+  <string name="wifi_countrycode_kr">Koreja</string>
+  <string name="wifi_countrycode_tr">Južna Afrika, Turčija</string>
+  <string name="wifi_countrycode_sg">Izrael, Singapur</string>
+  <string name="wifi_countrycode_br">Brazilija</string>
+  <string name="wifi_countrycode_in">Indija</string>
   <!-- Profiles -->
   <string name="profile_menu_delete_title">Izbriši</string>
   <string name="profile_action_none">Pusti nespremenjeno</string>
@@ -262,6 +275,7 @@
   <!-- Lights settings, LED notification -->
   <string name="led_notification_title">Nastavitve lučke</string>
   <string name="led_notification_text">Lučka LED omogočena v nastavitvah</string>
+  <string name="notification_light_no_apps_summary">Za dodajanje nadzora za posamezne aplikacije omogočite \'%1$s\' in pritisnite \'\u002b\' na menijski vrstici</string>
   <!-- Setting checkbox title for Whether to enable Android debugging support on the phone. -->
   <string name="enable_adb_cm">Razhroščevanje Android</string>
   <!-- Setting checkbox summary for Whether to enable Android debugging support on the phone -->
@@ -431,6 +445,7 @@
   <string name="app_ops_allowed_count">Dovoljeno <xliff:g id="count" example="2 times">%s </xliff:g></string>
   <string name="app_ops_ignored_count">Zavrnjeno <xliff:g id="count" example="2 times">%s </xliff:g></string>
   <string name="app_ops_both_count">Dovoljeno <xliff:g id="count">%1$s </xliff:g>, zavrnjeno <xliff:g id="count">%2$s </xliff:g></string>
+  <string name="app_ops_disabled_by_optimization">Onemogočeno z optimizacijo baterije</string>
   <!-- App ops menu options -->
   <string name="app_ops_show_user_apps">Prikaži uporabniške aplikacije</string>
   <string name="app_ops_show_system_apps">Prikaži vgrajene aplikacije</string>
@@ -490,7 +505,7 @@
   <string name="color_enhancement_title">Izboljšanje barv</string>
   <string name="color_enhancement_summary">Dinamično izboljšaj barve zaslona</string>
   <!-- Key backlight -->
-  <string name="button_backlight_title">Svetlost ozadja</string>
+  <string name="button_backlight_title">Osvetljeno ozadje</string>
   <string name="button_backlight_enabled">Osvetli gumbe</string>
   <string name="keyboard_backlight_enabled">Osvetli tipkovnico</string>
   <string name="button_backlight_seekbar_title">Svetlost gumbov</string>
@@ -517,6 +532,9 @@
   <!-- Buttons - Enable navbar -->
   <string name="disable_navkeys_title">Omogoči vrstico za krmarjenje na zaslonu</string>
   <string name="disable_navkeys_summary">Omogoči vrstico za krmarjenje na zaslonu in onemogoči fizične gumbe</string>
+  <!-- tap-to-wake -->
+  <string name="double_tap_to_wake_title">Dvakrat tapnite za bujenje</string>
+  <string name="double_tap_to_wake_summary">Dvakrat tapnite na zaslon, da ga vklopite</string>
   <!-- tap-to-sleep -->
   <string name="double_tap_to_sleep_title">Dvakrat tapnite za spanje</string>
   <string name="double_tap_to_sleep_summary">Dvakrat tapnite na vrstico stanja, da izklopite zaslon</string>
@@ -540,14 +558,6 @@
   <string name="color_red_title">Rdeča</string>
   <string name="color_green_title">Zelena</string>
   <string name="color_blue_title">Modra</string>
-  <!-- Hardware tunables - Gamma calibration -->
-  <string name="gamma_tuning_title_head">Umerjanje gama</string>
-  <string name="gamma_tuning_summary_head">Prilagodi vrednosti gama</string>
-  <string name="gamma_tuning_control_set_header">Skupina <xliff:g id="index">%d</xliff:g></string>
-  <!-- used if no name provided by overlay -->
-  <string name="gamma_tuning_contrast">Kontrast</string>
-  <string name="gamma_tuning_brightness">Svetlost</string>
-  <string name="gamma_tuning_saturation">Nasičenost</string>
   <!-- Launch music player when headset is connected -->
   <string name="headset_connect_player_title">Zaženi aplikacijo za glasbo</string>
   <string name="headset_connect_player_summary">Zaženi privzeto aplikacijo za glasbo, ko so priključene slušalke</string>
@@ -578,6 +588,9 @@
   <string name="saturation_str">Nasičenost: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">Kontrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">Jakost: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="screen_color_standard">Običajno</string>
+  <string name="screen_color_vivid">Živahno</string>
+  <string name="screen_color_custom">Po meri</string>
   <!-- LiveDisplay -->
   <string name="live_display_summary">Optimiziraj zaslon glede na čas dneva in pogoje okolice, da se izboljša berljivost in zmanjša obremenitev oči</string>
   <string name="live_display_mode">Način prikaza</string>
@@ -997,4 +1010,67 @@
   <string name="battery_info_status_charging_dock_ac">Poln. z nap. postaje</string>
   <!-- [CHAR_LIMIT=20] Battery use screen. Battery status shown in chart label when charging over Dock USB. -->
   <string name="battery_info_status_charging_dock_usb">Poln. preko USB-ja pos.</string>
+  <string name="restrict_app_wlan_title">Onemogoči aplikaciji uporabo omrežja Wi\u2011Fi</string>
+  <string name="restrict_app_wlan_summary">Prepreči aplikaciji uporabo podatkovne povezave Wi\u2011Fi</string>
+  <string name="restrict_app_cellular_title">Onemogoči aplikaciji uporabo mob. omrežja</string>
+  <string name="restrict_app_cellular_summary">Prepreči aplikaciji uporabo mobilnih podatkov</string>
+  <string name="privacy_guard_internet_category">Internet</string>
+  <!-- Weather -->
+  <string name="weather_settings_title">Vreme</string>
+  <string name="weather_settings_no_services_prompt">Ni nameščene storitve ponudnika vremena</string>
+  <string name="weather_settings_button">Nastavitve ponudnika</string>
+  <string name="weather_settings_activity_not_found">Menija nastavitev za tega ponudnika ni mogoče zagnati</string>
+  <string name="weather_settings_add_weather_provider">Dodaj ponudnika vremena</string>
+  <string name="weather_settings_general_settings_title">Splošno</string>
+  <string name="weather_settings_providers_title">Ponudniki</string>
+  <string name="weather_settings_temp_units_title">Enote za temperaturo</string>
+  <string name="weather_settings_temp_celsius">Celzij</string>
+  <string name="weather_settings_temp_fahrenheit">Fahrenheit</string>
+  <string name="weather_settings_keyword">vreme</string>
+  <string name="background_data_access">Dostop do podatkov v ozadju</string>
+  <string name="allow_background_both">Preko mobilnih podatkov in omr. Wi\u2011Fi</string>
+  <string name="allow_background_wlan">Samo preko omr. Wi\u2011Fi</string>
+  <string name="allow_background_none">Ni dostopa</string>
+  <string name="mobile_data_alert">Opozorilo mobilnih podatkov</string>
+  <string name="mobile_data_alert_summary">Obvesti, ko aplikacija uporablja znatno količino podatkov</string>
+  <string name="data_usage_menu_enable_data_alerts">Omogoči opozorila uporabe podatkov</string>
+  <string name="data_usage_menu_disable_data_alerts">Onemogoči opozorila uporabe podatkov</string>
+  <string name="data_usage_menu_reset_stats">Ponastavi statistiko podatkov</string>
+  <string name="reset_data_stats_msg">To bo izbrisalo vse prejšnje in trenutne podatke sledenja</string>
+  <string name="reset_stats_confirm">Potrdi</string>
+  <string name="restrict_cellular_access_title">Omeji dostop do mobilnih podatkov</string>
+  <string name="restrict_cellular_access_summary">Onemogoči dostop do podatkov na mobilnem omrežju</string>
+  <string name="restrict_cellular_access_dialog_title">Omeji dostop do mobilnih podatkov?</string>
+  <string name="restrict_cellular_access_dialog_summary">Ta značilnost lahko povzroči, da aplikacija, ki je odvisna od dostopa do omrežja, preneha delovati, ko so na voljo samo mob. omrežja.\n\nPrimernejše nastavitve nadzora porabe podatkov lahko najdete v aplikaciji.</string>
+  <!-- Label for settings shortcut: carrier selection -->
+  <string name="shortcut_carrier_title">Omrežni operaterji</string>
+  <!-- title for lock screen blur preference -->
+  <string name="lockscreen_blur_enabled_title">Zamegli ozadje</string>
+  <!-- title for lock screen weather preference -->
+  <string name="lockscreen_weather_enabled_title">Prikaži vreme</string>
+  <!-- Per app controls for LP keyguard notifications -->
+  <string name="app_notification_show_on_keyguard_title">Prikaži na zaslonu za zakl.</string>
+  <string name="app_notification_show_on_keyguard_summary">Na zaklenjenem zaslonu prikaži obvestila iz te aplikacije</string>
+  <string name="app_notification_no_ongoing_on_keyguard_title">Onem. vztr. obv. na zas. za zakl.</string>
+  <string name="app_notification_no_ongoing_on_keyguard_summary">Nikoli ne prikaži vztrajnih obvestil iz te aplikacije na zaklenjenem zaslonu</string>
+  <!-- CmRadioInfo -->
+  <string name="cm_radio_info_label">Izboljšan nadzor oddajnika</string>
+  <!-- Radio Control (IMS/MBN etc.) -->
+  <string name="cm_radio_info_mbn_auto_load_on_label">Izklopi samodejno nalaganje MBN-a</string>
+  <string name="cm_radio_info_mbn_auto_load_off_label">Vklopi samodejno nalaganje MBN-a</string>
+  <string name="cm_radio_info_volte_avail_ovr_on_label">Izklopi razhroščevanje VoLTE</string>
+  <string name="cm_radio_info_volte_avail_ovr_off_label">Vklopi razhroščevanje VoLTE</string>
+  <string name="cm_radio_info_vt_avail_ovr_on_label">Izklopi razhroščevanje VT</string>
+  <string name="cm_radio_info_vt_avail_ovr_off_label">Vklopi razhroščevanje VT</string>
+  <string name="cm_radio_info_wfc_avail_ovr_on_label">Izklopi razhroščevanje WFC</string>
+  <string name="cm_radio_info_wfc_avail_ovr_off_label">Vklopi razhroščevanje WFC</string>
+  <string name="cm_radio_info_adb_log_on_label">Izklopi dnevnik oddajnika ADB</string>
+  <string name="cm_radio_info_adb_log_off_label">Vklopi dnevnik oddajnika ADB</string>
+  <string name="cm_radio_info_diag_log_on_label">Izklopi dnevnik prepoz. težav</string>
+  <string name="cm_radio_info_diag_log_off_label">Vklopi dnevnik prepoz. težav</string>
+  <!-- Lock screen wallpaper -->
+  <string name="lockscreen_wallpaper_title">Slika ozadja</string>
+  <string name="not_available_with_app">Ni na voljo s/z %1$s</string>
+  <!-- Format string for fingerprint location message -->
+  <!-- Fingerprint sensor locations -->
 </resources>

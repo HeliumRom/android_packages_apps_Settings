@@ -88,6 +88,7 @@ import com.android.settings.search.Indexable;
 import com.android.settings.widget.SwitchBar;
 import cyanogenmod.providers.CMSettings;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -189,6 +190,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
 
+    private static final String LAZY_DEXOPT = "dexopt_lazy";
+
     private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
 
     private static final String TERMINAL_APP_PACKAGE = "com.android.terminal";
@@ -204,6 +207,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String PERSISTENT_DATA_BLOCK_PROP = "ro.frp.pst";
 
+    private static final String PROP_LAZY_DEXOPT = "persist.sys.lazy.dexopt";
+
     private static final int REQUEST_CODE_ENABLE_OEM_UNLOCK = 0;
 
     private static String DEFAULT_LOG_RING_BUFFER_SIZE_IN_BYTES = "262144"; // 256K
@@ -211,6 +216,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static final int[] MOCK_LOCATION_APP_OPS = new int[] {AppOpsManager.OP_MOCK_LOCATION};
 
     private static final String MULTI_WINDOW_SYSTEM_PROPERTY = "persist.sys.debug.multi_window";
+
+    private static final String SUPERUSER_BINARY_PATH = "/system/xbin/su";
+
     private IWindowManager mWindowManager;
     private IBackupManager mBackupManager;
     private DevicePolicyManager mDpm;
@@ -285,6 +293,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private SwitchPreference mShowAllANRs;
     private SwitchPreference mKillAppLongpressBack;
+    private SwitchPreference mLazyDexopt;
 
     private ListPreference mRootAccess;
     private Object mSelectedRootValue;
@@ -468,6 +477,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
         mKillAppLongpressBack = findAndInitSwitchPref(KILL_APP_LONGPRESS_BACK);
 
+        mLazyDexopt = (SwitchPreference) findPreference(LAZY_DEXOPT);
+        mLazyDexopt.setChecked(SystemProperties.getBoolean(PROP_LAZY_DEXOPT, false));
+        mLazyDexopt.setOnPreferenceChangeListener(this);
+        mAllPrefs.add(mLazyDexopt);
+
         Preference hdcpChecking = findPreference(HDCP_CHECKING_KEY);
         if (hdcpChecking != null) {
             mAllPrefs.add(hdcpChecking);
@@ -477,6 +491,13 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mRootAccess = (ListPreference) findPreference(ROOT_ACCESS_KEY);
         mRootAccess.setOnPreferenceChangeListener(this);
         if (!removeRootOptionsIfRequired()) {
+            if (isRootForAppsAvailable()) {
+                mRootAccess.setEntries(R.array.root_access_entries);
+                mRootAccess.setEntryValues(R.array.root_access_values);
+            } else {
+                mRootAccess.setEntries(R.array.root_access_entries_adb);
+                mRootAccess.setEntryValues(R.array.root_access_values_adb);
+            }
             mAllPrefs.add(mRootAccess);
         }
 
@@ -844,6 +865,17 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 .getStringArray(R.array.root_access_entries)[Integer.valueOf(value)]);
     }
 
+    private boolean isRootForAppsAvailable() {
+        boolean exists = false;
+        try {
+            File f = new File(SUPERUSER_BINARY_PATH);
+            exists = f.exists();
+        } catch (SecurityException e) {
+            // Ignore
+        }
+        return exists;
+    }
+
     public static boolean isRootForAppsEnabled() {
         int value = SystemProperties.getInt(ROOT_ACCESS_PROPERTY, 0);
         boolean daemonState =
@@ -857,10 +889,10 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         if (Integer.valueOf(newValue.toString()) < 2 && !oldValue.equals(newValue)
                 && "1".equals(SystemProperties.get("service.adb.root", "0"))) {
             SystemProperties.set("service.adb.root", "0");
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.ADB_ENABLED, 0);
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.ADB_ENABLED, 1);
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.ADB_ENABLED, 0);
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.ADB_ENABLED, 1);
         }
         updateRootAccessOptions();
     }
@@ -870,10 +902,10 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         SystemProperties.set(ROOT_ACCESS_PROPERTY, "0");
         if (!oldValue.equals("0") && "1".equals(SystemProperties.get("service.adb.root", "0"))) {
             SystemProperties.set("service.adb.root", "0");
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.ADB_ENABLED, 0);
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.ADB_ENABLED, 1);
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.ADB_ENABLED, 0);
+            Settings.Global.putInt(getActivity().getContentResolver(),
+                    Settings.Global.ADB_ENABLED, 1);
         }
         updateRootAccessOptions();
     }
@@ -1588,14 +1620,15 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         updateLogdSizeValues();
     }
 
-    private void updateUsbConfigurationValues() {
+    private void updateUsbConfigurationValues(boolean isUnlocked) {
         if (mUsbConfiguration != null) {
             UsbManager manager = (UsbManager) getSystemService(Context.USB_SERVICE);
 
             String[] values = getResources().getStringArray(R.array.usb_configuration_values);
             String[] titles = getResources().getStringArray(R.array.usb_configuration_titles);
             int index = 0;
-            for (int i = 0; i < titles.length; i++) {
+            // Assume if !isUnlocked -> charging, which should be at index 0
+            for (int i = 0; i < titles.length && isUnlocked; i++) {
                 if (manager.isFunctionEnabled(values[i])) {
                     index = i;
                     break;
@@ -1610,10 +1643,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private void writeUsbConfigurationOption(Object newValue) {
         UsbManager manager = (UsbManager)getActivity().getSystemService(Context.USB_SERVICE);
         String function = newValue.toString();
-        manager.setCurrentFunction(function);
         if (function.equals("none")) {
+            manager.setCurrentFunction(null);
             manager.setUsbDataUnlocked(false);
         } else {
+            manager.setCurrentFunction(function);
             manager.setUsbDataUnlocked(true);
         }
     }
@@ -1768,10 +1802,12 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     }
 
     private void confirmEnableOemUnlock() {
-        DialogInterface.OnClickListener onConfirmListener = new DialogInterface.OnClickListener() {
+        DialogInterface.OnClickListener onEnableOemListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Utils.setOemUnlockEnabled(getActivity(), true);
+                if (which == DialogInterface.BUTTON_POSITIVE) {
+                    Utils.setOemUnlockEnabled(getActivity(), true);
+                }
                 updateAllOptions();
             }
         };
@@ -1779,8 +1815,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         new AlertDialog.Builder(getActivity())
                 .setTitle(R.string.confirm_enable_oem_unlock_title)
                 .setMessage(R.string.confirm_enable_oem_unlock_text)
-                .setPositiveButton(R.string.enable_text, onConfirmListener)
-                .setNegativeButton(android.R.string.cancel, null)
+                .setPositiveButton(R.string.enable_text, onEnableOemListener)
+                .setNegativeButton(android.R.string.cancel, onEnableOemListener)
+                .setCancelable(false)
                 .create()
                 .show();
     }
@@ -1799,6 +1836,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 .setMessage(R.string.confirm_enable_multi_window_text)
                 .setPositiveButton(R.string.enable_text, onConfirmListener)
                 .setNegativeButton(android.R.string.cancel, onConfirmListener)
+                .setCancelable(false)
                 .create()
                 .show();
     }
@@ -2138,6 +2176,10 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         } else if (preference == mKeepScreenOn) {
             writeStayAwakeOptions(newValue);
             return true;
+        } else if (preference == mLazyDexopt) {
+            final boolean enabled = (Boolean) newValue;
+            SystemProperties.set(PROP_LAZY_DEXOPT, enabled ? "true" : "false");
+            return true;
         }
         return false;
     }
@@ -2252,7 +2294,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private BroadcastReceiver mUsbReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            updateUsbConfigurationValues();
+            boolean isUnlocked = intent.getBooleanExtra(UsbManager.USB_DATA_UNLOCKED, false);
+            updateUsbConfigurationValues(isUnlocked);
         }
     };
 
